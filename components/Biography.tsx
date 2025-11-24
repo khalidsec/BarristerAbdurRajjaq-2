@@ -23,18 +23,17 @@ const Biography: React.FC = () => {
                     <div className="relative overflow-hidden aspect-[3/4]">
                         <div className="absolute inset-0 border-[12px] border-royal-950/80 z-20 pointer-events-none"></div>
                         <div className="absolute inset-0 border border-accent-400/20 z-30 pointer-events-none m-3"></div>
+                        {/* Updated Image Path to public/images/r1.jpg */}
                         <img 
-                            src="https://picsum.photos/id/1059/600/800?grayscale" 
-                            alt="Working in Chambers" 
+                            src='/public/images/r1.jpg'
+                            alt="Barrister Abdur Razzaq" 
                             className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000 transform hover:scale-105"
                         />
                     </div>
                 </div>
 
                 {/* Caption / Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-royal-800 px-6 py-3 shadow-xl border border-royal-700 z-20">
-                    <span className="text-accent-400 font-serif italic text-sm">Lincoln’s Inn, 1976</span>
-                </div>
+                
               </div>
             </FadeIn>
           </div>

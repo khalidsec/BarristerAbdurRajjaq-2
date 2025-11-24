@@ -28,14 +28,14 @@ export const CONTRIBUTIONS: Contribution[] = [
 
 export const FAMILY: FamilyMember[] = [
   { 
-    name: "Dr. Ahmed Siddiq", 
+    name: "Ehsan Abdullah Siddiq", 
     relation: "Eldest Son", 
     role: "Senior Economist", 
     description: "Continuing his father's vision through economic policy research and development.",
     imageSeed: 101
   },
   { 
-    name: "Barrister Karim Siddiq", 
+    name: "Imran Siddiq", 
     relation: "Youngest Son", 
     role: "Advocate, Supreme Court", 
     description: "Walking in his father's footsteps, upholding justice in the highest courts.",

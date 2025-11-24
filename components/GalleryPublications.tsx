@@ -4,6 +4,14 @@ import { Download, ExternalLink, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const GalleryPublications: React.FC = () => {
+  // Array of small gallery images - Updated paths to /public/images/
+  const smallImages = [
+    '/public/images/r3.jpg',
+    '/public/images/r4.jpg',
+    '/public/images/r5.jpg',
+    '/public/images/r3.jpg' // Repeating r3 to fill the 4-grid layout perfectly
+  ];
+
   return (
     <section className="py-28 bg-royal-950">
       <div className="container mx-auto px-6">
@@ -18,19 +26,21 @@ const GalleryPublications: React.FC = () => {
           </Reveal>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px]">
+             {/* Main Large Image - r2 */}
              <Reveal className="col-span-2 row-span-2">
                 <div className="w-full h-full overflow-hidden rounded-xl group relative border border-royal-800">
-                    <img src="https://picsum.photos/id/1015/800/800" alt="Landscape" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" />
+                    <img src="/public/images/r2.jpg" alt="Barrister Razzaq Memory" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <span className="text-white font-serif italic text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Early days in the district court</span>
+                        <span className="text-white font-serif italic text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Moments of reflection and service</span>
                     </div>
                 </div>
              </Reveal>
              
-             {[1016, 1025, 1050, 1033].map((id, idx) => (
-                <Reveal key={id} delay={0.1 * (idx + 1)} className="col-span-1 row-span-1">
+             {/* Small Images Grid - r3, r4, r5 */}
+             {smallImages.map((src, idx) => (
+                <Reveal key={idx} delay={0.1 * (idx + 1)} className="col-span-1 row-span-1">
                     <div className="w-full h-full overflow-hidden rounded-xl group relative border border-royal-800">
-                        <img src={`https://picsum.photos/id/${id}/400/400`} alt="Detail" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" />
+                        <img src={src} alt={`Memory ${idx + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" />
                     </div>
                 </Reveal>
              ))}

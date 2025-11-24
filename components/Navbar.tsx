@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
         `}
       >
         <a href="#home" className="text-white font-body text-xl font-bold tracking-wider relative group flex items-center leading-none">
-          <span className="relative z-10 group-hover:text-accent-400 transition-colors duration-300">BARRISTER RAJJAQ</span>
+          <span className="relative z-10 group-hover:text-accent-400 transition-colors duration-300">BARRISTER A RAZZAQ</span>
         </a>
 
         {/* Desktop Menu */}
